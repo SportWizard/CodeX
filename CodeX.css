@@ -1,0 +1,32 @@
+header h1 {
+    text-align: center;
+}
+
+.input {
+    float: left;
+}
+
+.button {
+    float: right;
+}
+
+.button #trade, .button #panel {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.button #trade:hover, .button #panel:hover {
+    background-color: black;
+    color: red;
+}
+
+.map {
+    border: solid black;
+    margin: 50px;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
