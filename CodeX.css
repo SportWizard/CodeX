@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(224, 223, 223);
+}
+
 header h1 {
     text-align: center;
 }
@@ -12,10 +16,13 @@ header h1 {
 
 .button #trade, .button #panel {
     width: 200px;
+}
+
+select {
     border-radius: 20px;
 }
 
-.button #trade:hover, .button #panel:hover {
+.button #trade:hover{
     background-color: black;
     color: red;
 }
