@@ -26,7 +26,13 @@ button:hover{
 
 .map {
     border: solid black;
-    margin: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a p {
+    text-align: center;
 }
 
 footer {
