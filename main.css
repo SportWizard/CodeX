@@ -6,16 +6,13 @@ header h1 {
     text-align: center;
 }
 
-.input {
-    float: left;
-}
-
-.buttons {
+#trade, .countries {
     float: right;
 }
 
-.buttons #trade, .buttons #panel {
+#trade {
     width: 200px;
+    margin-right: 10px;
 }
 
 select, button, input{
