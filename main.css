@@ -6,7 +6,7 @@ header h1 {
     text-align: center;
 }
 
-#trade, .countries {
+#trade{
     float: right;
 }
 
