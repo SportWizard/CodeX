@@ -10,7 +10,10 @@ body {
     height: 90%;
     margin-top: 1%;
     margin-bottom: 1%;
+    padding: 10px;
     border-radius: 10px;
+    overflow-wrap: break-word;
+    overflow: auto;
 }
 
 .country1 {
@@ -25,10 +28,6 @@ body {
 .country2 {
     float: right;
     margin-right: 5%;
-}
-
-.margin {
-    margin: 30px;
 }
 
 select {

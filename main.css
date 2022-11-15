@@ -1,12 +1,12 @@
 body {
-    background-color: rgb(224, 223, 223);
+    background-color: rgb(230, 228, 228);
 }
 
 header h1 {
     text-align: center;
 }
 
-#trade, .countries {
+#trade{
     float: right;
 }
 

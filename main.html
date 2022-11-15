@@ -3,7 +3,6 @@
     <head>
         <title>EECS 1012 Project</title>
         <link href = "main.css" type = "text/css" rel = "stylesheet">
-        <script src = "main.js"></script>
     </head>
 
     <body>
@@ -23,15 +22,17 @@
                 <select id = "leader2">
                     <option></option>
                 </select>
+                <span class = "countries">Countries:</span>
+                <select class = "countries">
+                    <option></option>
+                </select>
                 Year: <input id = "year" type = "text" maxlength = "4"></input>
                 <button id = "submit">Submit</button>
 
                 <!--trade and panel-->
-                <select class = "countries">
-                    <option></option>
-                </select>
-                <span class = "countries">Countries:</span>
-                <button id = "trade">Trade</button>
+                <a href = "trade.html">
+                    <button id = "trade">Trade</button>
+                </a>
             </div>
 
             <br/>
@@ -42,8 +43,9 @@
             <a href = "credits.html" target = "_blank">
                 <p>Credits</p>
             </a>
+
             <footer>
-                CopyRight
+                CodeX | CopyRight
             </footer>
         </div>
     </body>
