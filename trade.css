@@ -4,6 +4,10 @@ body {
     background-repeat: no-repeat;
 }
 
+.exit {
+    float: left;
+}
+
 .country1, .country2{
     background-color: white;
     width: 42.5%;
@@ -18,7 +22,7 @@ body {
 
 .country1 {
     float: left;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 .country1 h2, .country2 h2 {
@@ -30,6 +34,6 @@ body {
     margin-right: 5%;
 }
 
-select {
+button, select {
     border-radius: 20px;
 }
