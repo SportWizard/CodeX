@@ -23,12 +23,11 @@ button {
     border-radius: 20px;
 }
 
-#info {
+.tabs {
     margin-left: 10%;
 }
 
-.tabs {
-    margin-top: 3%;
+.tabs #info, .tabs #election {
     width: 100px;
     height: 30px;
 }
