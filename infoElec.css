@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.infoBox {
+.box {
     background-color: white;
     margin-left: 10%;
     width: 80%;
@@ -15,7 +15,7 @@ body {
     overflow: auto;
 }
 
-.infoBox h2 {
+.box h2 {
     text-align: center;
 }
 
