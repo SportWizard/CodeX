@@ -1,14 +1,14 @@
 body {
     background-image: url("images/background.jpg");
-    background-size: 1440px;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.exit {
+#exit {
     float: left;
 }
 
-.country1, .country2{
+#country1, #country2{
     background-color: white;
     width: 42.5%;
     height: 90%;
@@ -20,16 +20,16 @@ body {
     overflow: auto;
 }
 
-.country1 {
+#country1 h2, #country2 h2 {
+    text-align: center;
+}
+
+#country1 {
     float: left;
     margin-left: 3%;
 }
 
-.country1 h2, .country2 h2 {
-    text-align: center;
-}
-
-.country2 {
+#country2 {
     float: right;
     margin-right: 5%;
 }
