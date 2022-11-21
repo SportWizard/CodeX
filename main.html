@@ -3,6 +3,7 @@
     <head>
         <title>EECS 1012 Project</title>
         <link href = "main.css" type = "text/css" rel = "stylesheet">
+        <script src = "search.js"></script>
     </head>
 
     <body>
@@ -19,12 +20,20 @@
                 Leader#2:
                 <input id = "leader2" type = "text">
                 <span class = "countries">Countries:</span>
-                <select class = "countries">
-                    <option></option>
+                <select class = "countries" id = "country">
+                    <option>Russia</option>
+                    <option>Italy</option>
+                    <option>Germany</option>
+                    <option>Equatorial Guinea</option>
+                    <option>Latvia</option>
+                    <option>South Africa</option>
+                    <option>Iran</option>
+                    <option>USA</option>
+                    <option>Canada</option>
                 </select>
                 Year: <input id = "year" type = "text" maxlength = "4"></input>
-                <button id = "submit">Submit</button>
-
+                <button onclick = "search();">Submit</button>
+                
                 <!--trade and panel-->
                 <a href = "trade.html">
                     <button id = "trade">Trade</button>
@@ -34,7 +43,7 @@
             <br/>
 
             <!--map-->
-            <img id = "map" src = "images/main/world-map.jpg" alt = "World Map"/>
+            <img class = "map" src = "images/main/world-map.jpg" alt = "World Map"/>
 
             <a href = "credits.html" target = "_blank">
                 <p>Credits</p>

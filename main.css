@@ -21,7 +21,7 @@ button:hover{
     color: white;
 }
 
-#map {
+.map {
     border: solid black;
     display: block;
     margin-left: auto;
