@@ -1,11 +1,10 @@
-const { json } = require('body-parser');
 const { request } = require('express');
 var express = require('express');
 var app = express();
 
-var countryInfo; //store the country information
+var jsontext //store the country information
 
-var port = 3000;
+var port = 3100;
 
 app.post('/post', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -15,108 +14,92 @@ app.post('/post', (req, res) => {
     var data = JSON.parse(req.query['data']);
 
     //check which one the user is trying to access
-    switch (data["country"]){
-        case "Russia":
-            countryInfo = Russia();
-            break;
-        case "Italy":
-            countryInfo = Italy();
-            break;
-        case "Germany":
-            countryInfo = Germany();
-            break;
-        case "Equatorial Guinea":
-            countryInfo = EqutorialGuinea();
-            break;
-        case "Latvia":
-            countryInfo = Latvia();
-            break;
-        case "South Africa":
-            countryInfo = SouthAfrica();
-            break;
-        case "Iran":
-            countryInfo = Iran();
-            break;
-        case "USA":
-            countryInfo = USA();
-            break;
-        case "Canada":
-            countryInfo = Canada();
-            break;
-        
-        res.send(countryInfo);
+    if (data["action"] == "information") {
+        switch (data["countryName"]) {
+            case "Russia":
+                Russia();
+                break;
+            case "Italy":
+                Italy();
+                break;
+            case "Germany":
+                Germany();
+                break;
+            case "Equatorial Guinea":
+                EqutorialGuinea();
+                break;
+            case "Latvia":
+                Latvia();
+                break;
+            case "South Africa":
+                SouthAfrica();
+                break;
+            case "Iran":
+                Iran();
+                break;
+            case "USA":
+                USA();
+                break;
+            case "Canada":
+                Canada();
+                break;
+        }
     }
+    console.log(jsontext);
+    res.send(jsontext); //send respond
 }).listen(port);
 console.log("server is running! (listening on port " + port + ")");
 
 function Russia() {
-    var jsontext = JSON.stringify({
-        
-    })
-
-    return jsontext;
+    jsontext = JSON.stringify({
+        "name": "Russia"
+    });
 }
 
 function Italy() {
-    var jsontext = JSON.stringify({
+    jsontext = JSON.stringify({
         
-    })
-
-    return jsontext;
+    });
 }
 
 function Germany() {
-    var jsontext = JSON.stringify({
+    jsontext = JSON.stringify({
         
-    })
-
-    return jsontext;
+    });
 }
 
 function EqutorialGuinea() {
-    var jsontext = JSON.stringify({
+    jsontext = JSON.stringify({
         
-    })
-
-    return jsontext;
+    });
 }
 
 function Latvia() {
-    var jsontext = JSON.stringify({
+    jsontext = JSON.stringify({
         
-    })
-
-    return jsontext;
+    });
 }
 
 function SouthAfrica() {
-    var jsontext = JSON.stringify({
+    jsontext = JSON.stringify({
         
-    })
-
-    return jsontext;
+    });
 }
 
 function Iran() {
-    var jsontext = JSON.stringify({
+    jsontext = JSON.stringify({
         
-    })
-
-    return jsontext;
+    });
 }
 
 function USA() {
-    var jsontext = JSON.stringify({
+    jsontext = JSON.stringify({
         
-    })
-
-    return jsontext;
+    });
 }
 
 function Canada() {
-    var jsontext = JSON.stringify({
+    jsontext = JSON.stringify({
         
-    })
-
-    return jsontext;
+    });
 }
