@@ -1,10 +1,10 @@
 body {
     background-image: url("images/background.jpg");
-    background-size: 1440px;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.box {
+#box {
     background-color: white;
     margin-left: 10%;
     width: 80%;
@@ -15,7 +15,7 @@ body {
     overflow: auto;
 }
 
-.box h2 {
+#box h2 {
     text-align: center;
 }
 
@@ -23,12 +23,11 @@ button {
     border-radius: 20px;
 }
 
-#info {
+#tabs {
     margin-left: 10%;
 }
 
-.tabs {
-    margin-top: 3%;
+#info, #election {
     width: 100px;
     height: 30px;
 }
