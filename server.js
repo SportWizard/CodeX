@@ -51,8 +51,8 @@ function Russia(type) {
             "language": "Russian",
             "population": "About 143 million people",
             "export": "Goods of energy such as oil, gas, petroleum and coal",
-            "import": "Machinery, equipment, vehicles, consumer goos, food and chemical products",
-            "funFact": "Russia has the longest railway,Largest country in the world,Has one of the busiest metros,Tetris was made in Russia,Have the codest village in the world,20% of Earth's trees are in Russia,Russia has 11 time zones,Russia is one of the first countries to produce vodka"
+            "import": "Machinery, equipment, vehicles, consumer goods, food and chemical products",
+            "funFact": "Russia has the longest railway,Largest country in the world,Has one of the busiest metros,Tetris was made in Russia,Have the coldest village in the world,20% of Earth's trees are in Russia,Russia has 11 time zones,Russia is one of the first countries to produce vodka"
         });
     }
     else if (type == "trade") {

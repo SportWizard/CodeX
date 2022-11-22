@@ -51,7 +51,7 @@ function info() {
     $("#box").append(information);
 
     //subtitle for each information
-    subtitle = ["Capital: ", "Language: ", "Population: ", "Export: ", "Import: "];
+    var subtitle = ["Capital: ", "Language: ", "Population: ", "Export: ", "Import: "];
 
     //create p block
     for (var x = 0; x < subtitle.length; x++) {
@@ -64,6 +64,33 @@ function info() {
     //add information
     for (var y = 0; y < subtitle.length; y++) {
         $("#msg" + y).text(subtitle[y] + response[y+2]);
+    }
+
+    var funFactTitle = document.createElement("p");
+
+    $(funFactTitle).attr("class", "funFactTitle");
+    $(".information").append(funFactTitle);
+
+    $(".funFactTitle").text("Fun facts:");
+
+    $(".funFactTitle").css({"font-weight": "bold", "font-style": "italic"});
+
+    var list = document.createElement("ul");
+
+    $(list).attr("class", "list");
+    $(".information").append(list);
+
+    var funFact = response[7].split(",");
+
+    for (var i = 0; i < funFact.length; i++) {
+        var bulletPoint = document.createElement("li");
+
+        $(bulletPoint).attr("id", "bulletPoint" + i);
+        $(list).append(bulletPoint);
+    }
+
+    for (var j = 0; j < funFact.length; j++) {
+        $("#bulletPoint" + j).text(funFact[j]);
     }
 
     $(".information").css({"float": "right", "width": "570px"});
