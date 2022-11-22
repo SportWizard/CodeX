@@ -58,48 +58,48 @@ function Russia() {
 
 function Italy() {
     jsontext = JSON.stringify({
-        
+        "name": "Italy"
     });
 }
 
 function Germany() {
     jsontext = JSON.stringify({
-        
+        "name": "Germany"
     });
 }
 
 function EqutorialGuinea() {
     jsontext = JSON.stringify({
-        
+        "name": "Equtorial Guinea"
     });
 }
 
 function Latvia() {
     jsontext = JSON.stringify({
-        
+        "name": "Latvia"
     });
 }
 
 function SouthAfrica() {
     jsontext = JSON.stringify({
-        
+        "name": "South Africa"
     });
 }
 
 function Iran() {
     jsontext = JSON.stringify({
-        
+        "name": "Iran"
     });
 }
 
 function USA() {
     jsontext = JSON.stringify({
-        
+        "name": "USA"
     });
 }
 
 function Canada() {
     jsontext = JSON.stringify({
-        
+        "name": "Canada"
     });
 }
