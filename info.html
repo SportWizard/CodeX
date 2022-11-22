@@ -3,10 +3,11 @@
     <head>
         <title>Information page</title>
         <link href = "infoElec.css" type = "text/css" rel = "stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src = "search.js"></script>
     </head>
 
-    <body>
+    <body onload = "info();"> <!--run this function once it gets to this html-->
         <a href = "main.html">
             <button>Exit</button>
         </a>
@@ -20,11 +21,6 @@
         
         <div id = "box">
             <h2>Information Page</h2>
-            <p id = "countryInfo"></p>
         </div>
-
-        <script>
-            response(); //run this function once it gets to this html
-        </script>
     </body>
 </html>

@@ -52,54 +52,63 @@ console.log("server is running! (listening on port " + port + ")");
 
 function Russia() {
     jsontext = JSON.stringify({
-        "name": "Russia"
+        "name": "Russia",
+        "image": "images/info/Russia.jpg"
     });
 }
 
 function Italy() {
     jsontext = JSON.stringify({
-        "name": "Italy"
+        "name": "Italy",
+        "image": "images/info/Italy.jpg"
     });
 }
 
 function Germany() {
     jsontext = JSON.stringify({
-        "name": "Germany"
+        "name": "Germany",
+        "image": "images/info/Germany.jpg"
     });
 }
 
 function EqutorialGuinea() {
     jsontext = JSON.stringify({
-        "name": "Equtorial Guinea"
+        "name": "Equtorial Guinea",
+        "image": "images/info/EqutorialGuinea.jpg"
     });
 }
 
 function Latvia() {
     jsontext = JSON.stringify({
-        "name": "Latvia"
+        "name": "Latvia",
+        "image": "images/info/Latvia.jpg"
     });
 }
 
 function SouthAfrica() {
     jsontext = JSON.stringify({
-        "name": "South Africa"
+        "name": "South Africa",
+        "image": "images/info/SouthAfrica.jpg"
     });
 }
 
 function Iran() {
     jsontext = JSON.stringify({
-        "name": "Iran"
+        "name": "Iran",
+        "image": "images/info/Iran.jpg"
     });
 }
 
 function USA() {
     jsontext = JSON.stringify({
-        "name": "USA"
+        "name": "USA",
+        "image": "images/info/USA.jpg"
     });
 }
 
 function Canada() {
     jsontext = JSON.stringify({
-        "name": "Canada"
+        "name": "Canada",
+        "image": "images/info/Canada.jpg"
     });
 }
