@@ -8,17 +8,17 @@ function search() {
             "countryName": country,
             "action": "information"}),
         store);
-
-    //switch window to info
-    window.location.href = "info.html";
 }
 
-function store(data, status) {
+function store(data) {
     var response = JSON.parse(data);
     //store info
     var dataStore = [response["name"]];
     //store the data so it can be shared across html
     sessionStorage.setItem("dataStore", dataStore);
+
+    //switch window to info page
+    window.location.href = "info.html";
 }
 
 function response() {
