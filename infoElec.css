@@ -1,0 +1,33 @@
+body {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#box {
+    background-color: white;
+    margin-left: 10%;
+    width: 80%;
+    margin-bottom: 3%;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+    overflow: auto;
+}
+
+#box h2 {
+    text-align: center;
+}
+
+button {
+    border-radius: 20px;
+}
+
+#tabs {
+    margin-left: 10%;
+}
+
+#info, #election {
+    width: 100px;
+    height: 30px;
+}
