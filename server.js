@@ -72,7 +72,7 @@ function Germany(type) {
             "population": "83 million people",
             "export": "Pharmaceutical products, motor cars, motor caravans, engines and other vehicle parts",
             "import": "Motor vehicles, industrial, electrical machinery, oil, mineral fuels, Pharmaceuticals, computer equipment and chemical products",
-            "funFact": "Most popular surname is \"Muller\",Beer is a food in Bavaria,Have 1000 varieties of sausages,Gummy bears was inbented in Germany,Germany has the world largest cathedral,Attempting to escape jail is legal in Germany,University is free, largest train station in Europe,Drinking age is 16, has over 400 zoo's"
+            "funFact": "Most popular surname is \"Muller\",Beer is a food in Bavaria,Have 1000 varieties of sausages,Gummy bears was inbented in Germany,Germany has the world largest cathedral,Attempting to escape jail is legal in Germany,University is free,Largest train station in Europe,Drinking age is 16,Has over 400 zoo's"
         });
     }
     else if (type == "trade") {
