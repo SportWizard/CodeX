@@ -86,7 +86,7 @@ function Argentina(type) {
     if (type == "info") {
         jsontext = JSON.stringify({
             "name": "Argentina",
-            "image": "",
+            "image": "images/info/Argentina.jpg",
             "capital": "",
             "language": "",
             "population": "",
@@ -106,7 +106,7 @@ function Australia(type) {
     if (type == "info") {
         jsontext = JSON.stringify({
             "name": "Australia",
-            "image": "",
+            "image": "images/info/Australia.jpg",
             "capital": "",
             "language": "",
             "population": "",
