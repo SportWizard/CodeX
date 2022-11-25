@@ -30,6 +30,7 @@ function yearFuture(data) {
 
     //check if p block and message has already been created
     if (pCreated == false) {
+        //message
         var msg = document.createElement("p");
 
         $(msg).text("Approximate year: ");
@@ -37,19 +38,28 @@ function yearFuture(data) {
 
         $("#box").append(msg);
 
-        for (var n = 0; n < years.length; n++) {
-            var numYearFuture = document.createElement("p");
+        //create div to clear the years for new years
+        var newDiv = document.createElement("div");
 
-            $(numYearFuture).attr("id", "numYearFuture" + n);
-            $("#box").append(numYearFuture);
-        }
-
-        pCreated = true;
+        $(newDiv).attr("class", "newDiv");
+        $("#box").append(newDiv);
+    }
+    else {
+        //clear years
+        $(".newDiv").empty();
     }
     
     //put information to p block
-    for (var m = 0; m < years.length; m++) {
-        election = m + 1;
-        $("#numYearFuture" + m).text("Election " + election + " from current year: " + years[m]);
+    for (var n = 0; n < years.length; n++) {
+        //display the years
+        var numYearFuture = document.createElement("p");
+
+        $(numYearFuture).attr("id", "numYearFuture" + n);
+        $(".newDiv").append(numYearFuture);
+
+        pCreated = true;
+
+        election = n + 1;
+        $("#numYearFuture" + n).text("Election " + election + " from current year: " + years[n]);
     }
 }
