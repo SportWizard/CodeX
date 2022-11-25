@@ -36,10 +36,57 @@ app.post('/post', (req, res) => {
                 break;
         }
     }
+    else if (data["action"] == "election") {
+        election(data["countryName"], data["numElection"]);
+    }
     console.log(jsontext);
     res.send(jsontext); //send respond
 }).listen(port);
 console.log("server is running! (listening on port " + port + ")");
+
+function election(country, numElection) {
+    yearLastElection = 0 //hard coded
+    yearOfEachElection = 0;
+    years = [];
+
+    //check which country the user selected
+    switch (country) {
+        case "Russia":
+            yearLastElection = 2018;
+            yearOfEachElection = 6;
+            break;
+        case "Germany":
+            yearLastElection = 2022;
+            yearOfEachElection = 5;
+            break;
+        case "Argentina":
+            yearLastElection = 2019;
+            yearOfEachElection = 4;
+            break;
+        case "Australia":
+            yearLastElection = 2022;
+            yearOfEachElection = 3;
+            break;
+        case "South Africa":
+            yearLastElection = 2019;
+            yearOfEachElection = 5;
+            break;
+        case "Iran":
+            yearLastElection = 2021;
+            yearOfEachElection = 4;
+            break;
+    }
+    
+    //calculate the year of future election
+    for (var i = 0; i < numElection; i++) {
+        yearLastElection += yearOfEachElection;
+        years[i] = yearLastElection;
+    }
+
+    jsontext = JSON.stringify({
+        "years": years
+    });
+}
 
 function Russia(type) {
     //check which type of information is need to responds/output

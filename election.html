@@ -3,9 +3,11 @@
     <head>
         <title>Election</title>
         <link href = "infoElec.css" type = "text/css" rel = "stylesheet">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src = "election.js"></script>
     </head>
 
-    <body>
+    <body onload = "currentYearDisplay();">
         <a href = "main.html">
             <button>Exit</button>
         </a>
@@ -20,8 +22,11 @@
         <div id = "box">
             <h2>Election</h2>
 
-            Year:
-            <input type = "text" maxlength = "4">
+            Enter the number of election in the future:
+            <input id = "numYear" type = "text">
+            <button onclick = "sendData();">Submit</button>
+
+            <p id = "currentYear">Current Year: </p>
         </div>
     </body>
 </html>

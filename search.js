@@ -13,7 +13,6 @@ function search() {
 
 function store(data) {
     var response = JSON.parse(data);
-    console.log(response);
     //store info
     var dataStore = response["name"] + "|" + response["image"] + "|" + response["capital"] + "|" + response["language"] + "|" + response["population"] + "|" + response["export"] + "|" + response["import"] + "|" + response["funFact"];
     //store the data so it can be shared across html
