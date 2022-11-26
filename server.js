@@ -45,34 +45,34 @@ app.post('/post', (req, res) => {
 console.log("server is running! (listening on port " + port + ")");
 
 function election(country, numElection) {
-    yearLastElection = 0 //hard coded
+    yearLastElection = 0
     yearOfEachElection = 0;
     years = [];
 
     //check which country the user selected
     switch (country) {
         case "Russia":
-            yearLastElection = 2018;
+            yearLastElection = 2018; //hard coded
             yearOfEachElection = 6;
             break;
         case "Germany":
-            yearLastElection = 2022;
+            yearLastElection = 2022; //hard coded
             yearOfEachElection = 5;
             break;
         case "Argentina":
-            yearLastElection = 2019;
+            yearLastElection = 2019; //hard coded
             yearOfEachElection = 4;
             break;
         case "Australia":
-            yearLastElection = 2022;
+            yearLastElection = 2022; //hard coded
             yearOfEachElection = 3;
             break;
         case "South Africa":
-            yearLastElection = 2019;
+            yearLastElection = 2019; //hard coded
             yearOfEachElection = 5;
             break;
         case "Iran":
-            yearLastElection = 2021;
+            yearLastElection = 2021; //hard coded
             yearOfEachElection = 4;
             break;
     }
@@ -134,12 +134,12 @@ function Argentina(type) {
         jsontext = JSON.stringify({
             "name": "Argentina",
             "image": "images/info/Argentina.jpg",
-            "capital": "",
-            "language": "",
-            "population": "",
-            "export": "",
-            "import": "",
-            "funcFact": ""
+            "capital": "Buenos Aires",
+            "language": "Spanish",
+            "population": "45.81 million people",
+            "export": " Cereals, food industry waste, Animal/vegetable fats, oil, waxes, vehicles, oil seeds, soybean meal, soybean oil, soybeans and corn",
+            "import": "cars, motor vehicles parts and accessories, Machinery, Electrical equipment, minerals and fuels",
+            "funFact": "Is home to both the highest and lowest points of the Southern Hemisphere, Capital of Argentina Buenos Aires translates to the \"good airs\" or \"fair winds\",King of beef,Government officials banned parents from naming children Messi in his hometown,The tango dance originated in Argentina, Argentina went through five presidents in just 10 days,Argentina has had two female presidents"
         });
     }
     else if (type == "trade") {
@@ -154,12 +154,12 @@ function Australia(type) {
         jsontext = JSON.stringify({
             "name": "Australia",
             "image": "images/info/Australia.jpg",
-            "capital": "",
-            "language": "",
-            "population": "",
-            "export": "",
-            "import": "",
-            "funcFact": ""
+            "capital": "Canberra",
+            "language": "No offical language, but English is the most common language spoken",
+            "population": "25.74 million",
+            "export": "Iron ore, coal, gold, petroleum, and frozen bovine meat",
+            "import": "Cars, petroleum, broadcasting equipment, crude oil, phone system devices and computers",
+            "funFact": "90% of Australians live on the coast,Australia is the only continent in the world without an active volcano,Australia has three times more sheep than people,An Australian man once tried to sell New Zealand on eBay,Australia was the second country in the world to give women the right to vote in 1902,Australia is home to the longest fence in the world,Tasmania has the cleanest air in the world,The Great Barrier Reef is the largest ecosystem in the world"
         });
     }
     else if (type == "trade") {
