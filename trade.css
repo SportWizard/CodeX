@@ -4,8 +4,10 @@ body {
     background-size: cover;
 }
 
-.exit {
-    float: left;
+.select {
+    text-align: center;
+    color: white;
+    font-size: 25px;
 }
 
 .country1, .country2{

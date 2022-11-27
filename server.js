@@ -39,6 +39,9 @@ app.post('/post', (req, res) => {
     else if (data["action"] == "election") {
         election(data["countryName"], data["numElection"]);
     }
+    else if (data["action"] == "trade") {
+        trade(data["countries"]);
+    }
     console.log(jsontext);
     res.send(jsontext); //send respond
 }).listen(port);
@@ -102,11 +105,6 @@ function Russia(type) {
             "funFact": "Russia has the longest railway,Largest country in the world,Has one of the busiest metros,Tetris was made in Russia,Have the coldest village in the world,20% of Earth's trees are in Russia,Russia has 11 time zones,Russia is one of the first countries to produce vodka"
         });
     }
-    else if (type == "trade") {
-        jsontext = JSON.stringify({
-
-        });
-    }
 }
 
 function Germany(type) {
@@ -120,11 +118,6 @@ function Germany(type) {
             "export": "Pharmaceutical products, motor cars, motor caravans, engines and other vehicle parts",
             "import": "Motor vehicles, industrial, electrical machinery, oil, mineral fuels, Pharmaceuticals, computer equipment and chemical products",
             "funFact": "Most popular surname is \"Muller\",Beer is a food in Bavaria,Have 1000 varieties of sausages,Gummy bears was inbented in Germany,Germany has the world largest cathedral,Attempting to escape jail is legal in Germany,University is free,Largest train station in Europe,Drinking age is 16,Has over 400 zoo's"
-        });
-    }
-    else if (type == "trade") {
-        jsontext = JSON.stringify({
-            
         });
     }
 }
@@ -142,11 +135,6 @@ function Argentina(type) {
             "funFact": "Is home to both the highest and lowest points of the Southern Hemisphere, Capital of Argentina Buenos Aires translates to the \"good airs\" or \"fair winds\",King of beef,Government officials banned parents from naming children Messi in his hometown,The tango dance originated in Argentina, Argentina went through five presidents in just 10 days,Argentina has had two female presidents"
         });
     }
-    else if (type == "trade") {
-        jsontext = JSON.stringify({
-
-        });
-    }
 }
 
 function Australia(type) {
@@ -160,11 +148,6 @@ function Australia(type) {
             "export": "Iron ore, coal, gold, petroleum, and frozen bovine meat",
             "import": "Cars, petroleum, broadcasting equipment, crude oil, phone system devices and computers",
             "funFact": "90% of Australians live on the coast,Australia is the only continent in the world without an active volcano,Australia has three times more sheep than people,An Australian man once tried to sell New Zealand on eBay,Australia was the second country in the world to give women the right to vote in 1902,Australia is home to the longest fence in the world,Tasmania has the cleanest air in the world,The Great Barrier Reef is the largest ecosystem in the world"
-        });
-    }
-    else if (type == "trade") {
-        jsontext = JSON.stringify({
-
         });
     }
 }
@@ -182,11 +165,6 @@ function SouthAfrica(type) {
             "funfact": "Has the longest continuous wine route on Earth,Largest meat producer in Africa,Only country with three capital cities,World's first heart transplant was completed in Cape Town, Only country in the world where two Nobel prize winners lived on the same street"
         });
     }
-    else if (type == "trade") {
-        jsontext = JSON.stringify({
-            
-        });
-    }
 }
 
 function Iran(type) {
@@ -202,9 +180,13 @@ function Iran(type) {
             "funfact": "The weekend in Iran is Friday,Thumbs-up in Iram is bad,Blowing your nose in public is rude,Majority of students in university are females,Iranians love tea"
         });
     }
-    else if (type == "trade") {
+}
+
+function trade(countries) {
+    if (countries == "Argentina-Australia") {
         jsontext = JSON.stringify({
-            
+            "country1": "Argentina,Animal feed,Vehicles,Oil seeds,Fruits and vegetables,Vegetable oil and fats",
+            "country2": "Australia,Coal,Crude Vegetable matter,Railwiclay vehes,Leather"
         });
     }
 }
