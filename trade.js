@@ -34,7 +34,7 @@ function information(data) {
 
         var newDiv1 = document.createElement("div");
 
-        $(newDiv1).attr("class", "newDiv");
+        $(newDiv1).attr("class", "newDiv1");
         $(".country1").append(newDiv1);
 
         //country 2
@@ -48,12 +48,15 @@ function information(data) {
 
         var newDiv2 = document.createElement("div");
 
-        $(newDiv2).attr("class", "newDiv");
+        $(newDiv2).attr("class", "newDiv2");
         $(".country2").append(newDiv2);
+
+        listCreated = true;
     }
     else {
         //clear previous information
-        $(".newDiv").empty();
+        $(".newDiv1").empty();
+        $(".newDiv2").empty();
     }
     
     //country 1
@@ -62,7 +65,7 @@ function information(data) {
     var list1 = document.createElement("ul");
 
     $(list1).attr("class", "list2");
-    $(".country1").append(list1);
+    $(".newDiv1").append(list1);
 
     //add list of item that is getting export to the other country
     for (var i = 1; i < country1.length; i++) {
@@ -82,7 +85,7 @@ function information(data) {
     var list2 = document.createElement("ul");
 
     $(list2).attr("class", "list2");
-    $(".country2").append(list2);
+    $(".newDiv2").append(list2);
 
     for (var i = 1; i < country2.length; i++) {
         var bulletPoint = document.createElement("li");

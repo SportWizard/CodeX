@@ -182,11 +182,18 @@ function Iran(type) {
     }
 }
 
+//trades between two countries
 function trade(countries) {
     if (countries == "Argentina-Australia") {
         jsontext = JSON.stringify({
             "country1": "Argentina,Animal feed,Vehicles,Oil seeds,Fruits and vegetables,Vegetable oil and fats",
             "country2": "Australia,Coal,Crude Vegetable matter,Railwiclay vehes,Leather"
+        });
+    }
+    else if (countries == "South Africa-Iran") {
+        jsontext = JSON.stringify({
+            "country1": "South Africa,Aluminum,Machinery,Nuclear reactors,Boilers,Ores slag and ash,Oil seed,Oleagic fruit,Grain,Fruits,Aircraft,Spacecraft",
+            "country2": "Iran,Inorganic chemicals,Precious metal compound,Isotope,Fertilizers,Carpets and other distillation,Products,Salt,Sulphur,Stone,Plaster,Lime,Cement,Ceramic products"
         });
     }
 }
