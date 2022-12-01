@@ -96,6 +96,7 @@ function Russia(type) {
     if (type == "info") {
         jsontext = JSON.stringify({
             "name": "Russia",
+            "yearFound": "December 25, 1991",
             "image": "images/info/Russia.jpg",
             "capital": "Moscow",
             "language": "Russian",
@@ -111,6 +112,7 @@ function Germany(type) {
     if (type == "info") {
         jsontext = JSON.stringify({
             "name": "Germany",
+            "yearFound": "May 23, 1949",
             "image": "images/info/Germany.jpg",
             "captial": "Berlin",
             "language": "German",
@@ -126,6 +128,7 @@ function Argentina(type) {
     if (type == "info") {
         jsontext = JSON.stringify({
             "name": "Argentina",
+            "yearFound": "July 9, 1816",
             "image": "images/info/Argentina.jpg",
             "capital": "Buenos Aires",
             "language": "Spanish",
@@ -141,6 +144,7 @@ function Australia(type) {
     if (type == "info") {
         jsontext = JSON.stringify({
             "name": "Australia",
+            "yearFound": "January 1, 1901",
             "image": "images/info/Australia.jpg",
             "capital": "Canberra",
             "language": "No offical language, but English is the most common language spoken",
@@ -156,13 +160,14 @@ function SouthAfrica(type) {
     if (type == "info") {
         jsontext = JSON.stringify({
             "name": "South Africa",
+            "yearFound": "May 31, 1961",
             "image": "images/info/SouthAfrica.jpg",
-            "capital": "",
+            "capital": "Cape town",
             "language": "11 Official languages",
-            "population": "",
+            "population": "60.04 million",
             "export": "Corn, precious metals, stones including diamonds, gold, platinum, machinery, chemical, vegetables and cars",
             "import": "Petroleum, motor vehicles part and accessories, cars and broadcasting equipment",
-            "funfact": "Has the longest continuous wine route on Earth,Largest meat producer in Africa,Only country with three capital cities,World's first heart transplant was completed in Cape Town, Only country in the world where two Nobel prize winners lived on the same street"
+            "funFact": "Has the longest continuous wine route on Earth,Largest meat producer in Africa,Only country with three capital cities,World's first heart transplant was completed in Cape Town, Only country in the world where two Nobel prize winners lived on the same street"
         });
     }
 }
@@ -171,13 +176,14 @@ function Iran(type) {
     if (type == "info") {
         jsontext = JSON.stringify({
             "name": "Iran",
+            "yearFound": "April 1, 1979",
             "image": "images/info/Iran.jpg",
-            "capital": "",
-            "language": "",
-            "population": "",
+            "capital": "Tehran",
+            "language": "Persian",
+            "population": "85.03 million",
             "export": "oil, natural gas, chemicals, plastics, fruits, ceramic products and metals",
             "import": "non-electrical machinery, steel, iron, chemicals, transport vehicles, plastics, animal, vegetable fats, oils, cleavage products",
-            "funfact": "The weekend in Iran is Friday,Thumbs-up in Iram is bad,Blowing your nose in public is rude,Majority of students in university are females,Iranians love tea"
+            "funFact": "The weekend in Iran is Friday,Thumbs-up in Iran is bad,Blowing your nose in public is rude,Majority of students in university are females,Iranians love tea"
         });
     }
 }
@@ -194,6 +200,12 @@ function trade(countries) {
         jsontext = JSON.stringify({
             "country1": "South Africa,Aluminum,Machinery,Nuclear reactors,Boilers,Ores slag and ash,Oil seed,Oleagic fruit,Grain,Fruits,Aircraft,Spacecraft",
             "country2": "Iran,Inorganic chemicals,Precious metal compound,Isotope,Fertilizers,Carpets and other distillation,Products,Salt,Sulphur,Stone,Plaster,Lime,Cement,Ceramic products"
+        });
+    }
+    else if (countries == "Germany-Russia") {
+        jsontext = JSON.stringify({
+            "country1": "Germany,Cars,Car parts & accessories,Medicines",
+            "country2": "Russia,Crude Petroleum,Refined Petroleum,Coal Briquettes/Blocks"
         });
     }
 }

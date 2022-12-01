@@ -14,7 +14,7 @@ function search() {
 function store(data) {
     var response = JSON.parse(data);
     //store info
-    var dataStore = response["name"] + "|" + response["image"] + "|" + response["capital"] + "|" + response["language"] + "|" + response["population"] + "|" + response["export"] + "|" + response["import"] + "|" + response["funFact"];
+    var dataStore = response["name"] + "|" + response["yearFound"] + "|" + response["image"] + "|" + response["capital"] + "|" + response["language"] + "|" + response["population"] + "|" + response["export"] + "|" + response["import"] + "|" + response["funFact"];
     //store the data so it can be shared across html
     sessionStorage.setItem("dataStore", dataStore);
 
@@ -34,13 +34,21 @@ function info() {
     $(".countryName").text("Country: " + response[0]);
     $(".countryName").css({"text-align": "center"});
 
+    var yearFound = document.createElement("h3");
+
+    $(yearFound).attr("class", "yearFound");
+    $("#box").append(yearFound);
+
+    $(".yearFound").text("Year found: " + response[1]);
+    $(".yearFound").css({"text-align": "center"});
+
     //create img element for country flag
     var flag = document.createElement("img");
 
     $(flag).attr("class", "flag");
     $("#box").append(flag);
 
-    $(".flag").attr("src", response[1]);
+    $(".flag").attr("src", response[2]);
     $(".flag").css({"border": "solid black"});
 
     //create a box for the information
@@ -62,7 +70,7 @@ function info() {
 
     //add information
     for (var y = 0; y < subtitle.length; y++) {
-        $("#msg" + y).text(subtitle[y] + response[y+2]);
+        $("#msg" + y).text(subtitle[y] + response[y+3]);
     }
 
     var funFactTitle = document.createElement("p");
@@ -79,7 +87,7 @@ function info() {
     $(list).attr("class", "list");
     $(".information").append(list);
 
-    var funFact = response[7].split(",");
+    var funFact = response[8].split(",");
 
     for (var i = 0; i < funFact.length; i++) {
         var bulletPoint = document.createElement("li");
