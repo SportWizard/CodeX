@@ -42,6 +42,9 @@ app.post('/post', (req, res) => {
     else if (data["action"] == "trade") {
         trade(data["countries"]);
     }
+    else if (data["action"] == "headOfState") {
+        headOfstate(data["countryName"], data["year"]);
+    }
     console.log(jsontext);
     res.send(jsontext); //send respond
 }).listen(port);
@@ -207,5 +210,164 @@ function trade(countries) {
             "country1": "Germany,Cars,Car parts & accessories,Medicines",
             "country2": "Russia,Crude Petroleum,Refined Petroleum,Coal Briquettes/Blocks"
         });
+    }
+}
+
+function headOfstate(country, year) {
+    year = parseInt(year);
+    if (country == "Russia") {
+        switch (true) {
+            case 1991 <= year && year <= 1993:
+                jsontext = JSON.stringify({
+                    "elective": "Boris Yeltsin: July 10, 1991 - September 22, 1993|Alexander Rustskoy: September 22, 1993 - October 4, 1993|Boris Yeltsin: October 4, 1993 - November 5, 1996"
+                });
+                break;
+            case 1993 < year && year <= 1996:
+                jsontext = JSON.stringify({
+                    "elective": "Boris Yeltsin: October 4, 1993 - November 5, 1996|Viktor Chernomyrdin: November 5, 1996 - November 6, 1996|Boris Yeltsin: November 6, 1996 - December 31, 1999"
+                });
+                break;
+            case 1996 < year && year <= 2000:
+                jsontext = JSON.stringify({
+                    "elective": "Vladimir Putin: December 31, 1999 - May 7, 2000"
+                });
+                break;
+            case 2000 < year && year <= 2008:
+                jsontext = JSON.stringify({
+                    "elective": "Vladimir Putin: May 7, 2000 - May 7, 2008"
+                });
+                break;
+            case 2008 < year && year <= 2012:
+                jsontext = JSON.stringify({
+                    "elective": "Dmitry Medvedev: May 7, 2008 - May 7, 2012"
+                });
+                break;
+            case 2012 < year:
+                jsontext = JSON.stringify({
+                    "elective": "Vladimir Putin: May 7, 2012 - now"
+                });
+                break;
+            default:
+                jsontext = JSON.stringify({
+                    "elective": "Outside the range"
+                })
+        }
+    }
+    else if (country == "Germany") {
+        switch (true) {
+            case 1999 <= year && year <= 2004:
+                jsontext = JSON.stringify({
+                    "elective": "Johannes Rau: July 1, 1999 - June 30, 2004|Horst Köhler: July 1, 2004 - May 31, 2010"
+                });
+                break;
+            case 2004 < year && year <= 2010:
+                jsontext = JSON.stringify({
+                    "elective": "Horst Köhler: July 1, 2004 - May 31, 2010|Jens Böhrnsen: May 31, 2010 - June 30 2010|Christian Wulff: June 30, 2010 - February 17, 2012"
+                });
+                break;
+            case 2010 < year && year <= 2012:
+                jsontext = JSON.stringify({
+                    "elective": "Horst Köhler: July 1, 2004 - May 31, 2010|Jens Böhrnsen: May 31, 2010 - June 30 2010|Christian Wulff: June 30, 2010 - February 17, 2012|Horst Seehofer: February 17 2012 - March 18, 2012|Joachim Gauck: March 18, 2012 - March 18, 2017"
+                });
+                break;
+            case 2012 < year:
+                jsontext = JSON.stringify({
+                    "elective": "Christian Wulff: June 30, 2010 - February 17, 2012|Horst Seehofer: February 17 2012 - March 18, 2012|Joachim Gauck: March 18, 2012 - March 18, 2017Joachim Gauck: March 18, 2012 - March 18, 2017|Frank-Walter Steinmeier: March 18, 2017 - now"
+                });
+                break;
+            default:
+                jsontext = JSON.stringify({
+                    "elective": "Outside the range"
+                })
+        }
+    }
+    else if (country == "Argentina") {
+        switch (true) {
+            case 1999 <= year && year <= 2001:
+                jsontext = JSON.stringify({
+                    "elective": "Fernando de la Rúa: December 10, 1999 - December 21, 2001|Ramón Puerta: December 21, 2001 - December 23, 2001|Adolfo Rodriguez Saá: December 23, 2001 - December 30, 2001|Eduardo Camaño: December 30, 2001 - January 2, 2002"
+                });
+                break;
+            case 2001 < year && year <= 2002:
+                jsontext = JSON.stringify({
+                    "elective": "Eduardo Camaño: December 30, 2001 - January 2, 2002|Eduardo Duhalde: January 2, 2002 - May 25, 2003"
+                });
+                break;
+            case 2002 < year && year <= 2003:
+                jsontext = JSON.stringify({
+                    "elective": "Eduardo Duhalde: January 2, 2002 - May 25, 2003|Néstor KirchnerL May 25, 2003 - December 10, 2007"
+                });
+                break;
+            case 2003 < year && year <= 2007:
+                jsontext = JSON.stringify({
+                    "elective": "Néstor KirchnerL May 25, 2003 - December 10, 2007"
+                })
+                break;
+            case 2007 < year && year <= 2011:
+                jsontext = JSON.stringify({
+                    "elective": "Néstor KirchnerL May 25, 2003 - December 10, 2007|Cristina Fernández de Kirchner: December 10, 2007 - December 10, 2011|Cristina Fernández de Kirchner: December 10, 2011 - December 10, 2015"
+                });
+                break;
+            case 2011 < year && year <= 2015:
+                jsontext = JSON.stringify({
+                    "elective": "Cristina Fernández de Kirchner: December 10, 2007 - December 10, 2011|Cristina Fernández de Kirchner: December 10, 2011 - December 10, 2015"
+                });
+                break;
+            case 2015 < year:
+                jsontext = JSON.stringify({
+                    "elective": "Cristina Fernández de Kirchner: December 10, 2011 - December 10, 2015|Federico Pinedo: December 10, 2015 - December 10, 2015|Mauricio Macri: December 10, 2015 - December 10, 2019|Alberto Fernández: December 10, 2019 - now"
+                });
+                break;
+            default:
+                jsontext = JSON.stringify({
+                    "elective": "Outside the range"
+                })
+        }
+    }
+    else if (country == "South Africa") {
+        switch (true) {
+            case 1994 <= year && year <= 1999:
+                jsontext = JSON.stringify({
+                    "elective": "Nelson Mandela: May 10, 1994 - June 14, 1999|Thabo Mbeki: June 14, 1999 - September 24, 2008"
+                });
+                break;
+            case 1999 <= year && year <= 2008:
+                jsontext = JSON.stringify({
+                    "elective": "Thabo Mbeki: June 14, 1999 - September 24, 2008|Ivy Matsepe-Casaburri: September 25, 2008 - September 25, 2008|Kgalema Motlanthe: September 25, 2008 - May 9, 2009"
+                });
+                break;
+            case 2008 < year && year <= 2009:
+                jsontext = JSON.stringify({
+                    "elective": "Kgalema Motlanthe: September 25, 2008 - May 9, 2009|Jacob Zuma: May 9, 2009 - February 2018"
+                });
+                break;
+            case 2009 < year:
+                jsontext = JSON.stringify({
+                    "elective": "Jacob Zuma: May 9, 2009 - February 2018|Cyril Ramaphosa: February 14, 2018 - February 15, 2018|Cyril Ramaphosa: February 15, 2018 - now"
+                });
+                break;
+            default:
+                jsontext = JSON.stringify({
+                    "elective": "Outside the range"
+                })
+        }
+    }
+    else if (country == "Iran") {
+        switch (true) {
+            case 1979 <= year && year <= 1979:
+                jsontext = JSON.stringify({
+                    "elective": "Ruhollah Khomeini: February 5, 1979 - December 3, 1979|Ruhollah Khomeini: December 3, 1979 - June 3, 1989"
+                });
+                break;
+            case 1979 < year:
+                jsontext = JSON.stringify({
+                    "elective": "Ruhollah Khomeini: December 3, 1979 - June 3, 1989|Ali Khamenei: June 4, 1989 - now"
+                });
+                break;
+            default:
+                jsontext = JSON.stringify({
+                    "elective": "Outside the range"
+                })
+        }
     }
 }

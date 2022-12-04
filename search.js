@@ -2,18 +2,12 @@ var url = "http://localhost:3100/post";
 
 function search() {
     var country = document.getElementById("country").value;
-    var leader = document.getElementById("leader").value;
-    var leader2 = document.getElementById("leader2").value;
-    var year = document.getElementById("year").value;
-
-    if (leader == "" && leader2 == "" && year == "") {
-        //send request
-        $.post(url + "?data=" + JSON.stringify({
-                "countryName": country,
-                "action": "information",
-                "type": "info"}),
-            store);
-    }
+    //send request
+    $.post(url + "?data=" + JSON.stringify({
+            "countryName": country,
+            "action": "information",
+            "type": "info"}),
+        store);
 }
 
 function store(data) {
