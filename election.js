@@ -21,6 +21,9 @@ function yearBound() {
     else if (country == "Germany") {
         yearBound.innerHTML = "(1999 - now)";
     }
+    else if (country == "Australia") {
+        yearBound.innerHTML = "(1952 - now)";
+    }
     else if (country == "South Africa") {
         yearBound.innerHTML = "(1994 - now)";
     }

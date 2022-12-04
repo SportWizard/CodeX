@@ -328,6 +328,19 @@ function headOfstate(country, year) {
                 })
         }
     }
+    else if (country == "Australia") {
+        switch (true) {
+            case 1952 <= year:
+                jsontext = JSON.stringify({
+                    "elective": "Queen Elizabeth II: February 6, 1952 - September 8, 2022|king charles III: September 8, 2022 - now"
+                })
+                break;
+            default:
+                jsontext = JSON.stringify({
+                    "elective": "Outside the range"
+                })
+        }
+    }
     else if (country == "South Africa") {
         switch (true) {
             case 1994 <= year && year <= 1999:
