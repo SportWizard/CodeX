@@ -214,8 +214,12 @@ function trade(countries) {
 }
 
 function headOfstate(country, year) {
+    //conver to integer to compare
     year = parseInt(year);
+
+    //find the correct country
     if (country == "Russia") {
+        //find the correct year
         switch (true) {
             case 1991 <= year && year <= 1993:
                 jsontext = JSON.stringify({

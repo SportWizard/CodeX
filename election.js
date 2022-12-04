@@ -33,12 +33,14 @@ function sendData() {
     var response = sessionStorage.getItem("dataStore").split("|");
     var country = response[0];
 
-    var leader = document.getElementById("leader").value;
-    var leader2 = document.getElementById("leader2").value;
     var year = document.getElementById("year").value;
     var numYear = document.getElementById("numYear").value;
 
-    if (leader == "" && leader2 == "" && year == "") {
+    var error = document.getElementById("error");
+
+    if (year == "") {
+        error.style = "none";
+
         //send request
         $.post(url + "?data=" + JSON.stringify({
             "countryName": country,
@@ -46,12 +48,17 @@ function sendData() {
             "numElection": numYear}),
         yearFuture);
     }
-    else if (leader == "" && leader2 == "" && numYear == "") {
+    else if (numYear == "") {
+        error.style = "none";
+
         $.post(url + "?data=" + JSON.stringify({
             "countryName": country,
             "action": "headOfState",
             "year": year}),
         headOfState);
+    }
+    else {
+        error.style.display = "block";
     }
 }
 

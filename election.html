@@ -23,13 +23,6 @@
             <h2>Election</h2>
             <p id = "warning">Only input one section</p>
 
-            Leader#:
-            <input id = "leader" type = "text">
-            Leader#2:
-            <input id = "leader2" type = "text">
-
-            <hr/>
-
             Enter a year to view the head of state for that year:
             <input id = "year" type = "text" maxlength = "4"></input>
             <span id = "yearBound"></span>
@@ -42,6 +35,8 @@
             <hr/>
 
             <button onclick = "sendData();">Submit</button>
+
+            <h1 id = "error">ERROR</h1>
 
             <p id = "currentYear">Current Year: </p>
         </div>
