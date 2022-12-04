@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mocha test</title>
+        <link href = "./node_modules/mocha/mocha.css" rel = "stylesheet"/>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    
+    <div id="mocha"></div>
+    <script src = "node_modules/mocha/mocha.js"></script>
+    <script src = "node_modules/chai/chai.js"></script>
+    <script>mocha.setup('bdd')</script>
+
+    <script src = "election.js"></script>
+    <script src = "tests/checkYearFuture.js"></script>
+    <script>mocha.run()</script>
+</html>

@@ -1,5 +1,29 @@
 {
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "codex",
+  "version": "1.0.0",
+  "main": "election.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SportWizard/CodeX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SportWizard/CodeX/issues"
+  },
+  "homepage": "https://github.com/SportWizard/CodeX#readme",
+  "description": ""
 }
