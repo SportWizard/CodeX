@@ -92,6 +92,8 @@ function election(country, numElection) {
     jsontext = JSON.stringify({
         "years": years
     });
+
+    return years;
 }
 
 function Russia(type) {
