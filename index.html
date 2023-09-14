@@ -1,0 +1,52 @@
+<!--Install express on this file and run the server before using-->
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>EECS 1012 Project</title>
+        <link href = "index.css" type = "text/css" rel = "stylesheet">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src = "search.js"></script>
+    </head>
+
+    <body>
+        <div class = "main">
+            <!--title-->
+            <header>
+                <h1>Database</h1>
+            </header>
+
+            <!--inputs-->
+            <div class = "inputs">
+                <span class = "countries">Countries:</span>
+                <select class = "countries" id = "country">
+                    <option>Russia</option>
+                    <option>Germany</option>
+                    <option>Argentina</option>
+                    <option selected = "selected">Australia</option>
+                    <option>South Africa</option>
+                    <option>Iran</option>
+                </select>
+                <button onclick = "search();">Submit</button>
+                
+                <!--trade and panel-->
+                <a href = "trade.html">
+                    <button id = "trade">Trade</button>
+                </a>
+            </div>
+
+            <br/>
+
+            <!--map-->
+            <img class = "map" src = "images/main/world-map.jpg" alt = "World Map"/>
+
+            <a href = "credits.html" target = "_blank">
+                <p>Credits</p>
+            </a>
+
+            <footer>
+                CodeX | CopyRight
+            </footer>
+        </div>
+    </body>
+</html>
